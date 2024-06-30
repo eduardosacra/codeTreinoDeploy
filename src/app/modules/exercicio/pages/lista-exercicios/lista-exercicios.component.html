@@ -1,0 +1,12 @@
+@if(listaExercicios$ | async; as listaExercicios ){
+    <div class="cards-container">
+        @for (exercicio of listaExercicios; track $index) {
+            <div class="card" (click)="navegarParaExercicio(exercicio)">
+                <h2>{{exercicio.titulo}}</h2>
+                <p class="difficulty">Dificuldade: {{exercicio.nivelDificuldade}}</p>
+                <p>{{exercicio.descricao}}</p>
+                <p>{{exercicio.notas}}</p>
+            </div>
+        }
+    </div>
+}
